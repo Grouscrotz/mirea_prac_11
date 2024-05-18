@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void toRotationActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, RotationActivity.class);
+        startActivity(intent);
+
+    }
+
 
 
 
