@@ -1,6 +1,8 @@
 package com.example.mirea_prac_11;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,4 +18,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
+
+    public void toWebView(View view) {
+        Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+        startActivity(intent);
+
+    }
+
+
+
+
 }
