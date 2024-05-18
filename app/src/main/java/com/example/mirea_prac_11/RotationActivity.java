@@ -14,13 +14,21 @@ import androidx.core.view.WindowInsetsCompat;
 public class RotationActivity extends AppCompatActivity {
     private  ImageView imageView;
     private ObjectAnimator rotateAnim;
+    private ObjectAnimator moveAnim;
+    private ObjectAnimator scaleX;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rotation);
 
         imageView = findViewById(R.id.imageView);
+        // Объект для вращения
         rotateAnim = ObjectAnimator.ofFloat(imageView,"rotation",0f,360f);
+        // Объект для перемещения по x
+        moveAnim = ObjectAnimator.ofFloat(imageView,"translationX",0f,300f);
+        // Объект для изменения размера
+        scaleX = ObjectAnimator.ofFloat(imageView,"scaleX",1f,2f);
+
 
     }
 
@@ -35,7 +43,29 @@ public class RotationActivity extends AppCompatActivity {
         rotateAnim.end();
     }
 
+    public void movement(View view) {
+        moveAnim.setDuration(2000);
 
+        moveAnim.setRepeatCount(ObjectAnimator.INFINITE);
+        moveAnim.setRepeatMode(ObjectAnimator.REVERSE);
+
+        moveAnim.start();
+    }
+
+    public void stopMovement(View view) {
+        moveAnim.end();
+
+    }
+
+    public void inflate(View view) {
+        scaleX.setDuration(1000);
+        scaleX.start();
+    }
+
+
+    public void narrowGuse(View view) {
+        scaleX.end();
+    }
 
 
 
