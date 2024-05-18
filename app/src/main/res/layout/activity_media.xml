@@ -5,30 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MediaActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
-        android:backgroundTint="#FF9800"
-        android:onClick="toWebView"
-        android:text="WebView"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Начать проигрывание"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:onClick="toMediaPlayer"
-        android:id="@+id/button2"
+        android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:backgroundTint="#C66D6D"
-        android:text="MediaPlayer"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#050404"
+        android:onClick="stopMedia"
+        android:text="Стоп"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void toMediaPlayer(View view) {
+        Intent intent = new Intent(MainActivity.this, MediaActivity.class);
+        startActivity(intent);
+
+    }
+
+
+
 
 
 
