@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void toNotificationActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+        startActivity(intent);
+
+    }
+
 
 
 

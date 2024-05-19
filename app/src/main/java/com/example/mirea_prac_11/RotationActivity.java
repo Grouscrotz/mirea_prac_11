@@ -52,6 +52,7 @@ public class RotationActivity extends AppCompatActivity {
         moveAnim.start();
     }
 
+    // *? Как вернуть в исходное положение
     public void stopMovement(View view) {
         moveAnim.end();
 
@@ -62,9 +63,10 @@ public class RotationActivity extends AppCompatActivity {
         scaleX.start();
     }
 
-
+    // *? Как вернуть в исходное положение
     public void narrowGuse(View view) {
         scaleX.end();
+
     }
 
 
